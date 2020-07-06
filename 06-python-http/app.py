@@ -17,5 +17,8 @@ def getjson():
     return jsonify(result)
 
 # flask run --port=8888
-# app.run(port=8888)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8888)
+    
 
