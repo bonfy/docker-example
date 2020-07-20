@@ -64,4 +64,7 @@ $ docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE 
 ubuntu              latest              74435f89ab78        2 weeks ago         73.9MB
 
+
+$ docker run 
+# docker stop/start/restart container_id
 ```
