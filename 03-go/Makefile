@@ -5,7 +5,7 @@ container_name=$(username)-$(project_name)
 
 image:
 	@echo Creating image $(image_name)...
-	GOOS=linux go build -o app
+	CGO_ENABLED=0 GOOS=linux go build -o app
 	docker build -t $(image_name) .
 	rm -f app
 run:
