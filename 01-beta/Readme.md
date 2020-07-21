@@ -67,4 +67,13 @@ ubuntu              latest              74435f89ab78        2 weeks ago         
 
 $ docker run 
 # docker stop/start/restart container_id
+
+# Remove all docker container
+$ docker rm $(docker ps -aq)
+
+# Remove all docker images
+$ docker rmi $(docker images -aq)
+
+# Remove all docker resources
+$ docker system prune
 ```
