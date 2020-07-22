@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-python-back
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azure-python-back
+  template:
+    metadata:
+      labels:
+        app: azure-python-back
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: azure-python-back
+        image: bonfy/app-pycompose
+        ports:
+        - containerPort: 8888
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: azure-python-back
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8888
+  selector:
+    app: azure-python-back
