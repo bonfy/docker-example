@@ -1,4 +1,4 @@
-project_name=app-pycompose
+project_name=app-flask
 username=bonfy
 image_name=$(username)/$(project_name)
 container_name=$(username)-$(project_name)
