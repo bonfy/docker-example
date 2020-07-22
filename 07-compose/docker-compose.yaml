@@ -1,0 +1,7 @@
+version: '3'
+services:
+  azure-python-back:
+    image: bonfy/app-pycompose
+    container_name: azure-python-back
+    ports:
+        - "9000:8888"
