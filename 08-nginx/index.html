@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+
+<link href="//code.bdstatic.com/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cn.vuejs.org/css/page.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<head>
+<title>Docker Commands</title>
+</head>
+<div id="app">
+  <label>Please input name:<label>
+  <input v-model="message">
+
+
+  <pre>
+      <code class="hljs command">
+        Command list
+
+        # Build
+        $ docker build -t {{message}} .
+
+        # Commit
+        
+      </code>
+  </pre>
+</div>
+
+<script>
+var app6 = new Vue({
+  el: '#app',
+  data: {
+    message: 'app-flask'
+  }
+})
+</script>
+
+</html>
